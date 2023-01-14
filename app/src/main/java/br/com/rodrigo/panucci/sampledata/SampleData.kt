@@ -28,24 +28,9 @@ val sampleProductWithoutImage = Product(
 
 val sampleProducts = List(10) { index ->
     Product(
-        name = loremName,
+        name = "$loremName $index",
         price = BigDecimal("9.99"),
         description = loremDesc,
         image = if (index % 2 == 0) "https://picsum.photos/1920/1080" else null
     )
 }
-
-val bottomAppBarItems = listOf(
-    BottomAppBarItem(
-        label = "Destaques",
-        icon = Icons.Filled.AutoAwesome
-    ),
-    BottomAppBarItem(
-        label = "Menu",
-        icon = Icons.Filled.RestaurantMenu
-    ),
-    BottomAppBarItem(
-        label = "Bebidas",
-        icon = Icons.Outlined.LocalBar
-    ),
-)
